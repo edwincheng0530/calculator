@@ -1,0 +1,59 @@
+* {
+    font-family:'Courier New', Courier, monospace
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    transform: scale(3);
+    padding: 10px;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.result {
+    text-align: right;
+    border-style: solid;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.previous {
+    font-size: 8px;
+}
+/*  */
+.input {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.button.clear, button.zero {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
