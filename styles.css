@@ -17,9 +17,9 @@ body {
     flex-direction: column;
     background-color: lightgray;
     transform: scale(3);
+    border-radius: 5px; 
     padding: 10px;
     gap: 5px;
-    border-radius: 5px;
 }
 
 .result {
@@ -27,6 +27,8 @@ body {
     border-style: solid;
     padding: 5px;
     font-size: 15px;
+    border-color: gray;
+    border-radius: 5px;
 }
 
 .previous {
