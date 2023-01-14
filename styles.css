@@ -35,6 +35,11 @@ body {
     font-size: 8px;
 }
 /*  */
+.output {
+    max-width: 87px;
+    overflow: scroll;
+    scrollbar-width: 10px;
+}
 .input {
     display: flex;
     justify-content: space-evenly;
