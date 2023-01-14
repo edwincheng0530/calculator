@@ -20,6 +20,9 @@ body {
     border-radius: 5px; 
     padding: 10px;
     gap: 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
 }
 
 .result {
@@ -38,7 +41,6 @@ body {
 .output {
     max-width: 87px;
     overflow: scroll;
-    scrollbar-width: 10px;
 }
 .input {
     display: flex;
