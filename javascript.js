@@ -36,6 +36,7 @@ let two_operands = [];
 let current_number = "0";
 let current_operation = "";
 let final_operation = "";
+//To keep track of when to special_clear()
 let equalled = false;
 
 
@@ -114,6 +115,9 @@ function addOperator(button) {
 
 function equalsSign(button) {
     if(current_number != "") {
+        if(two_operands.length != 1) {
+            return;
+        }
         two_operands.push(current_number);
         current_number = "";
         let temp_second = two_operands.pop();
@@ -121,15 +125,13 @@ function equalsSign(button) {
         let answer = operate(temp_first, temp_second, final_operation);
         previousOutput.innerHTML = output.innerHTML;
         output.innerHTML = answer;
-        two_operands.push(answer);
         equalled = true;
-
+        two_operands.push(answer);
         console.log(two_operands);
-        console.log(current_number);
-        console.log(current_operation);
     }
 }
 
+//Pressing CLEAR button
 function clearing() {
     for(let i = 0; i < two_operands.length; i++) {
         two_operands.pop();
@@ -140,6 +142,7 @@ function clearing() {
     previousOutput.innerHTML = "0";
 }
 
+//When a number is pressed with value present on output
 function special_clear() {
     for(let i = 0; i < two_operands.length; i++) {
         two_operands.pop();
