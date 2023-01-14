@@ -1,17 +1,17 @@
 function add(x, y) {
-    return parseInt(x)+parseInt(y);
+    return Number(x)+Number(y);
 }
 
 function subtract(x, y) {
-    return parseInt(x)-parseInt(y);
+    return Number(x)-Number(y);
 }
 
 function multiply(x, y) {
-    return parseInt(x)*parseInt(y);
+    return Number(x)*Number(y);
 }
 
 function divide(x, y) {
-    return parseInt(x)/parseInt(y);
+    return Number(x)/Number(y);
 }
 
 function operate(num1, num2, operator) {
@@ -100,7 +100,6 @@ buttons.forEach(button => {
 });
 
 function clear() {
-    //make for loop for howver many elemetns in two operands and remove them
     for(let i = 0; i < two_operands.length; i++) {
         two_operands.pop();
     }
@@ -109,3 +108,6 @@ function clear() {
     output.innerHTML = "0";
     previousOutput.innerHTML = "0";
 }
+
+// round evaluated numbers so that they are 4 decimal spaces
+//add decimal ??
